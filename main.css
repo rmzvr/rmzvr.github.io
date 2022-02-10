@@ -1,0 +1,102 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+
+  background: #000;
+}
+
+.container {
+  height: 100vh;
+
+  position: relative;
+
+  overflow: hidden;
+}
+
+.row {
+  display: inline-flex;
+  margin-left: -51px;
+  margin-top: -32px;
+}
+
+.row:nth-child(even) {
+  margin-left: 0px;
+}
+
+.hexagon {
+  position: relative;
+  height: 110px;
+  width: 100px;
+  background: #111;
+  margin: 1px;
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  transition: 2s;
+  z-index: 10;
+
+  color: white;
+  font-family: Ubuntu;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 13px;
+
+  animation: animate 4s linear infinite;
+}
+
+@keyframes animate {
+  0% {
+    filter: hue-rotate(0deg);
+  }
+  100% {
+    filter: hue-rotate(360deg);
+  }
+}
+
+.hexagon > div {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-shadow: 0px 0px 22px rgba(255, 255, 255, 0.3);
+  user-select: none;
+  pointer-events: none;
+}
+
+.hexagon > div * {
+  word-spacing: 100vw;
+  user-select: none;
+  pointer-events: none;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.hexagon:hover {
+  transition: background-color 0s;
+  background-color: #0f0;
+}
+
+.hexagon.open {
+  transition: transform 0.3s;
+  transform: scale(4);
+  z-index: 100;
+  cursor: pointer;
+  animation: none;
+  background-color: #111;
+
+  background-image: url("https://raw.githubusercontent.com/rzvr/todo-app/master/screenshots/desktop-dark-all.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.hexagon.open > div {
+  background-color: rgba(0, 0, 0, 0.5);
+}

@@ -82,7 +82,7 @@ function createGrid() {
 function fillText() {
   const rows = document.querySelectorAll(".row");
 
-  const row = Math.round(window.innerHeight / 77) - 4;
+  const row = 3;
   let col = 4;
 
   const letters = [
@@ -110,19 +110,19 @@ function fillText() {
 function fillContent(content) {
   const rows = document.querySelectorAll(".row");
 
-  const row = Math.round(window.innerHeight / 77) - 3;
-  let col = 4;
+  const row = 4;
+  let col = 3;
 
   const activeElements = [
-    { row: row, el: 4 },
-    { row: row, el: 5 },
-    { row: row, el: 6 },
-    { row: row, el: 7 },
-    { row: row, el: 8 },
-    { row: row, el: 9 },
-    { row: row, el: 10 },
-    { row: row, el: 11 },
-    { row: row, el: 12 },
+    { row: row },
+    { row: row },
+    { row: row },
+    { row: row },
+    { row: row },
+    { row: row },
+    { row: row },
+    { row: row },
+    { row: row },
   ];
 
   activeElements.forEach((item) => {

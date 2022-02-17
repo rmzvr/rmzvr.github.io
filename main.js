@@ -3,62 +3,53 @@ window.onload = () => {
     {
       name: "stats preview",
       url: "https://rzvr.github.io/stats-preview-card/",
-      image:
-        "https://raw.githubusercontent.com/rzvr/stats-preview-card/main/done/desktop.png",
+      image: "/images/1.png",
     },
     {
-      name: "sunnyside agency landing",
+      name: "sunnyside agency",
       url: "https://rzvr.github.io/sunnyside-agency-landing-page/",
-      image:
-        "https://raw.githubusercontent.com/rzvr/sunnyside-agency-landing-page/main/screenshots/desktop.png",
+      image: "/images/2.png",
     },
     {
-      name: "faq accordion card",
+      name: "faq accordion",
       url: "https://rzvr.github.io/faq-accordion-card/",
-      image:
-        "https://raw.githubusercontent.com/rzvr/faq-accordion-card/main/assets/screenshots/desktop.png",
+      image: "/images/3.png",
     },
     {
       name: "calculator app",
       url: "https://rzvr.github.io/calculator-app/",
-      image:
-        "https://raw.githubusercontent.com/rzvr/calculator-app/main/screenshots/desktop-neutral-theme.png",
+      image: "/images/4.png",
     },
     {
       name: "url shortening",
       url: "https://rzvr.github.io/url-shortening-api/",
-      image:
-        "https://raw.githubusercontent.com/rzvr/url-shortening-api/main/screenshots/desktop-large-links.png",
+      image: "/images/5.png",
     },
     {
       name: "interactive comments",
       url: "https://rzvr.github.io/interactive-comments-section/",
-      image:
-        "https://raw.githubusercontent.com/rzvr/interactive-comments-section/main/screenshots/desktop.png",
+      image: "/images/6.png",
     },
     {
       name: "todo app",
       url: "https://rzvr.github.io/todo-app/",
-      image:
-        "https://raw.githubusercontent.com/rzvr/todo-app/master/screenshots/desktop-dark-all.png",
+      image: "/images/7.png",
     },
     {
-      name: "officelite coming soon",
+      name: "officelite landing",
       url: "https://rzvr.github.io/officelite-coming-soon-site/",
-      image:
-        "https://raw.githubusercontent.com/rzvr/officelite-coming-soon-site/main/src/images/screenshots/home-desktop.png",
+      image: "/images/8.png",
     },
     {
       name: "Random landing",
       url: "https://rzvr.github.io/site/",
-      image:
-        "https://raw.githubusercontent.com/rzvr/site/main/Screenshot%202022-02-10%20at%2011-20-54%20Front-end%20Science.png",
+      image: "/images/9.png",
     },
   ];
 
   createGrid();
   fillContent(repos);
-  fillText();
+  fillProject();
 };
 
 function createGrid() {
@@ -79,7 +70,7 @@ function createGrid() {
   }
 }
 
-function fillText() {
+function fillProject() {
   const rows = document.querySelectorAll(".row");
 
   const row = 3;
@@ -103,7 +94,7 @@ function fillText() {
   letters.forEach((item) => {
     const currEl = rows[item.row - 1].children[item.el - 1];
 
-    currEl.innerHTML = `<div><span style="font-size: 36px">${item.letter}</span></div>`;
+    currEl.innerHTML = `<span style="font-size: 36px">${item.letter}</span>`;
   });
 }
 
@@ -114,30 +105,33 @@ function fillContent(content) {
   let col = 3;
 
   const activeElements = [
-    { row: row },
-    { row: row },
-    { row: row },
-    { row: row },
-    { row: row },
-    { row: row },
-    { row: row },
-    { row: row },
-    { row: row },
+    { row },
+    { row },
+    { row },
+    { row },
+    { row },
+    { row },
+    { row },
+    { row },
+    { row },
   ];
 
-  activeElements.forEach((item) => {
-    item.el = col++;
-  });
-
   activeElements.forEach((item, index) => {
+    item.el = col++;
+
     const currEl = rows[item.row - 1].children[item.el - 1];
 
     currEl.target = "_blank";
     currEl.classList.add("active");
-    currEl.innerHTML = `<div><span>${content[index]?.name
-      .split("-")
-      .join(" ")}</span></div>`;
+    currEl.innerHTML = `
+      <div>
+        <span>
+          ${content[index]?.name.split("-").join(" ")}
+        </span>
+      </div>
+      `;
     currEl.style.cursor = "pointer";
+    currEl.style.backgroundImage = `url(${content[index]?.image})`;
 
     currEl.addEventListener("click", (e) => {
       if (e.target.classList.contains("open")) {
@@ -145,8 +139,8 @@ function fillContent(content) {
       }
 
       e.target.classList.add("open");
+
       e.target.style.transform = "scale(4)";
-      e.target.style.backgroundImage = `url(${content[index]?.image})`;
     });
 
     currEl.addEventListener("mouseleave", (e) => {
@@ -154,7 +148,6 @@ function fillContent(content) {
       e.target.removeAttribute("href");
       setTimeout(() => {
         e.target.classList.remove("open");
-        e.target.style.backgroundImage = "";
       }, 300);
     });
   });

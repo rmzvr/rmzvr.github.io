@@ -2,47 +2,47 @@ window.onload = () => {
   const repos = [
     {
       name: "stats preview",
-      url: "https://rzvr.github.io/stats-preview-card/",
+      url: "https://rmzvr.github.io/stats-preview-card/",
       image: "/images/1.png",
     },
     {
       name: "sunnyside agency",
-      url: "https://rzvr.github.io/sunnyside-agency-landing-page/",
+      url: "https://rmzvr.github.io/sunnyside-agency-landing-page/",
       image: "/images/2.png",
     },
     {
       name: "faq accordion",
-      url: "https://rzvr.github.io/faq-accordion-card/",
+      url: "https://rmzvr.github.io/faq-accordion-card/",
       image: "/images/3.png",
     },
     {
       name: "calculator app",
-      url: "https://rzvr.github.io/calculator-app/",
+      url: "https://rmzvr.github.io/calculator-app/",
       image: "/images/4.png",
     },
     {
       name: "url shortening",
-      url: "https://rzvr.github.io/url-shortening-api/",
+      url: "https://rmzvr.github.io/url-shortening-api/",
       image: "/images/5.png",
     },
     {
       name: "interactive comments",
-      url: "https://rzvr.github.io/interactive-comments-section/",
+      url: "https://rmzvr.github.io/interactive-comments-section/",
       image: "/images/6.png",
     },
     {
       name: "todo app",
-      url: "https://rzvr.github.io/todo-app/",
+      url: "https://rmzvr.github.io/todo-app/",
       image: "/images/7.png",
     },
     {
       name: "officelite landing",
-      url: "https://rzvr.github.io/officelite-coming-soon-site/",
+      url: "https://rmzvr.github.io/officelite-coming-soon-site/",
       image: "/images/8.png",
     },
     {
       name: "Random landing",
-      url: "https://rzvr.github.io/site/",
+      url: "https://rmzvr.github.io/frontend-science/",
       image: "/images/9.png",
     },
   ];

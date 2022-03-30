@@ -57,8 +57,36 @@ window.onload = () => {
     },
   ]
 
+  const socials = [
+    {
+      url: 'https://www.linkedin.com/in/rmzvr/',
+      image: '/images/linkedin.svg',
+    },
+    {
+      url: 'https://github.com/rmzvr',
+      image: '/images/github.svg',
+    },
+    {
+      url: 'https://t.me/rmzvr/',
+      image: '/images/telegram.svg',
+    },
+    {
+      url: 'https://join.skype.com/invite/IT8NGMAUZXDb',
+      image: '/images/skype.svg',
+    },
+    {
+      url: 'mailto:rmzvr@protonmail.com',
+      image: '/images/protonmail.svg',
+    },
+    {
+      url: 'https://www.frontendmentor.io/profile/rmzvr',
+      image: '/images/frontendmentor.svg',
+    },
+  ]
+
   createGrid()
   fillContent(repos)
+  fillSocials(socials)
   fillProject()
 }
 
@@ -128,7 +156,31 @@ function fillProject() {
 
   iterator(projects, 6)
   iterator(social, 7)
-  // iterator(medias, 6)
+}
+
+function fillSocials(content) {
+  const rows = document.querySelectorAll('.row')
+
+  const activeElements = [
+    { row: 7, el: 4 + 4 },
+    { row: 7, el: 5 + 4 },
+    { row: 7, el: 6 + 4 },
+    { row: 7, el: 7 + 4 },
+    { row: 7, el: 8 + 4 },
+    { row: 7, el: 9 + 4 },
+  ]
+
+  activeElements.forEach((item, index) => {
+    const currEl = rows[item.row - 1].children[item.el - 1]
+
+    currEl.target = '_blank'
+    currEl.style.cursor = 'pointer'
+    currEl.innerHTML = `
+      <a href="${content[index]?.url}" target="_blank" style="width: 100%;height: 100%;display: grid;place-content: center;"">
+        <img width="50" heigth="50" src="${content[index]?.image}" alt="icon">
+      </a>
+    `
+  })
 }
 
 function fillContent(content) {

@@ -3,85 +3,85 @@ window.onload = () => {
     {
       name: 'stats preview',
       url: 'https://rmzvr.github.io/stats-preview-card/',
-      image: '/images/1.png',
+      image: '/images/1.png'
     },
     {
       name: 'sunnyside agency',
       url: 'https://rmzvr.github.io/sunnyside-agency-landing-page/',
-      image: '/images/2.png',
+      image: '/images/2.png'
     },
     {
       name: 'calculator app',
       url: 'https://rmzvr.github.io/calculator-app/',
-      image: '/images/4.png',
+      image: '/images/4.png'
     },
     {
       name: 'faq accordion',
       url: 'https://rmzvr.github.io/faq-accordion-card/',
-      image: '/images/3.png',
+      image: '/images/3.png'
     },
     {
       name: 'url shortening',
       url: 'https://rmzvr.github.io/url-shortening-api/',
-      image: '/images/5.png',
+      image: '/images/5.png'
     },
     {
       name: 'todo app',
       url: 'https://rmzvr.github.io/todo-app/',
-      image: '/images/7.png',
+      image: '/images/7.png'
     },
     {
       name: 'interactive comments',
       url: 'https://rmzvr.github.io/interactive-comments-section/',
-      image: '/images/6.png',
+      image: '/images/6.png'
     },
     {
       name: 'Planet facts',
       url: 'https://rmzvr.github.io/planets-fact/',
-      image: '/images/10.png',
+      image: '/images/10.png'
     },
     {
       name: 'officelite landing',
       url: 'https://rmzvr.github.io/officelite-coming-soon-site/',
-      image: '/images/8.png',
+      image: '/images/8.png'
     },
     {
       name: 'Rock, paper, scissors game',
       url: 'https://rmzvr.github.io/rock-paper-scissors-game/',
-      image: '/images/11.png',
+      image: '/images/11.png'
     },
     {
       name: 'Random landing',
       url: 'https://rmzvr.github.io/frontend-science/',
-      image: '/images/9.png',
-    },
+      image: '/images/9.png'
+    }
   ]
 
   const socials = [
     {
       url: 'https://www.linkedin.com/in/rmzvr/',
-      image: '/images/linkedin.svg',
+      image: '/images/linkedin.svg'
     },
     {
       url: 'https://github.com/rmzvr',
-      image: '/images/github.svg',
+      image: '/images/github.svg'
     },
     {
       url: 'https://t.me/rmzvr/',
-      image: '/images/telegram.svg',
+      image: '/images/telegram.svg'
     },
     {
       url: 'https://join.skype.com/invite/IT8NGMAUZXDb',
-      image: '/images/skype.svg',
+      image: '/images/skype.svg'
     },
     {
       url: 'mailto:rmzvr@protonmail.com',
-      image: '/images/protonmail.svg',
+      image: '/images/protonmail.svg'
     },
     {
-      url: 'https://www.frontendmentor.io/profile/rmzvr',
-      image: '/images/frontendmentor.svg',
-    },
+      url: '/docs/Roman_Zvir_Resume.pdf',
+      image: '/images/resume2.png'
+    }
   ]
 
   createGrid()
@@ -119,7 +119,7 @@ function fillProject() {
     { row: row, letter: 'E' },
     { row: row, letter: 'C' },
     { row: row, letter: 'T' },
-    { row: row, letter: 'S' },
+    { row: row, letter: 'S' }
   ]
 
   const social = [
@@ -129,17 +129,7 @@ function fillProject() {
     { row: row + 3, letter: 'I' },
     { row: row + 3, letter: 'A' },
     { row: row + 3, letter: 'L' },
-    { row: row + 3, letter: 'S' },
-  ]
-
-  const medias = [
-    { row: row + 3, letter: 'LinkedIn' },
-    { row: row + 3, letter: 'GitHub' },
-    { row: row + 3, letter: 'Email' },
-    { row: row + 3, letter: 'Telegram' },
-    { row: row + 3, letter: 'Frontend Mentor' },
-    { row: row + 3, letter: '' },
-    { row: row + 3, letter: '' },
+    { row: row + 3, letter: 'S' }
   ]
 
   function iterator(arr, colsCount) {
@@ -167,7 +157,7 @@ function fillSocials(content) {
     { row: 7, el: 6 + 4 },
     { row: 7, el: 7 + 4 },
     { row: 7, el: 8 + 4 },
-    { row: 7, el: 9 + 4 },
+    { row: 7, el: 9 + 4 }
   ]
 
   activeElements.forEach((item, index) => {
@@ -176,8 +166,8 @@ function fillSocials(content) {
     currEl.target = '_blank'
     currEl.style.cursor = 'pointer'
     currEl.innerHTML = `
-      <a href="${content[index]?.url}" target="_blank" style="width: 100%;height: 100%;display: grid;place-content: center;"">
-        <img width="50" heigth="50" src="${content[index]?.image}" alt="icon">
+      <a href="${content[index].url}" target="_blank" style="width: 100%;height: 100%;display: grid;place-content: center;"">
+        <img width="50" heigth="50" src="${content[index].image}" alt="icon">
       </a>
     `
   })
@@ -197,7 +187,7 @@ function fillContent(content) {
     { row: 3 + 2, el: 5 + 2 },
     { row: 3 + 2, el: 6 + 2 },
     { row: 3 + 2, el: 7 + 2 },
-    { row: 3 + 2, el: 8 + 2 },
+    { row: 3 + 2, el: 8 + 2 }
   ]
 
   activeElements.forEach((item, index) => {
@@ -208,16 +198,16 @@ function fillContent(content) {
     currEl.innerHTML = `
       <div>
         <span>
-          ${content[index]?.name.split('-').join(' ')}
+          ${content[index].name.split('-').join(' ')}
         </span>
       </div>
       `
     currEl.style.cursor = 'pointer'
-    currEl.style.backgroundImage = `url(${content[index]?.image})`
+    currEl.style.backgroundImage = `url(${content[index].image})`
 
     currEl.addEventListener('click', (e) => {
       if (e.target.classList.contains('open')) {
-        e.target.href = content[index]?.url
+        e.target.href = content[index].url
       }
 
       e.target.classList.add('open')

@@ -75,7 +75,7 @@ window.onload = () => {
       image: '/images/skype.svg'
     },
     {
-      url: 'mailto:rmzvr@protonmail.com',
+      url: 'mailto:rmzvr@proton.me',
       image: '/images/protonmail.svg'
     },
     {

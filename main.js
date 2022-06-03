@@ -1,5 +1,5 @@
 window.onload = () => {
-  const repos = [
+  const content1 = [
     {
       name: 'stats preview',
       url: 'https://rmzvr.github.io/stats-preview-card/',
@@ -34,7 +34,10 @@ window.onload = () => {
       name: 'interactive comments',
       url: 'https://rmzvr.github.io/interactive-comments-section/',
       image: '/images/6.png'
-    },
+    }
+  ]
+
+  const content2 = [
     {
       name: 'Planet facts',
       url: 'https://rmzvr.github.io/planets-fact/',
@@ -85,9 +88,18 @@ window.onload = () => {
   ]
 
   createGrid()
-  fillContent(repos)
-  fillSocials(socials)
-  fillProject()
+  const rows = document.querySelectorAll('.row')
+
+  let initialCell = Math.round(
+    (rows[0].children.length - 'projects'.length) / 2
+  )
+
+  fillText(3, initialCell, 'projects')
+  fillContent(3, initialCell, content1)
+  fillContent(4, initialCell + 1, content2)
+
+  fillText(6, initialCell + 1, 'socials')
+  fillSocials(7, initialCell + 2, socials)
 }
 
 function createGrid() {
@@ -108,60 +120,26 @@ function createGrid() {
   }
 }
 
-function fillProject() {
-  const row = 3
+function fillText(row, initialCell, text) {
+  const rows = document.querySelectorAll('.row')
+  const letters = text.toUpperCase().split('')
 
-  const projects = [
-    { row: row, letter: 'P' },
-    { row: row, letter: 'R' },
-    { row: row, letter: 'O' },
-    { row: row, letter: 'J' },
-    { row: row, letter: 'E' },
-    { row: row, letter: 'C' },
-    { row: row, letter: 'T' },
-    { row: row, letter: 'S' }
-  ]
+  letters.forEach((letter) => {
+    const currentCell = rows[row - 1].children[initialCell - 1]
 
-  const social = [
-    { row: row + 3, letter: 'S' },
-    { row: row + 3, letter: 'O' },
-    { row: row + 3, letter: 'C' },
-    { row: row + 3, letter: 'I' },
-    { row: row + 3, letter: 'A' },
-    { row: row + 3, letter: 'L' },
-    { row: row + 3, letter: 'S' }
-  ]
+    initialCell++
 
-  function iterator(arr, colsCount) {
-    const rows = document.querySelectorAll('.row')
-    let col = colsCount
-
-    arr.forEach((item) => {
-      item.el = col++
-      const currEl = rows[item.row - 1].children[item.el - 1]
-
-      currEl.innerHTML = `<span style="font-size: 36px">${item.letter}</span>`
-    })
-  }
-
-  iterator(projects, 6)
-  iterator(social, 7)
+    currentCell.innerHTML = `<span style="font-size: 36px">${letter}</span>`
+  })
 }
 
-function fillSocials(content) {
+function fillSocials(row, initalCell, content) {
   const rows = document.querySelectorAll('.row')
 
-  const activeElements = [
-    { row: 7, el: 4 + 4 },
-    { row: 7, el: 5 + 4 },
-    { row: 7, el: 6 + 4 },
-    { row: 7, el: 7 + 4 },
-    { row: 7, el: 8 + 4 },
-    { row: 7, el: 9 + 4 }
-  ]
+  content.forEach((item, index) => {
+    const currEl = rows[row - 1].children[initalCell - 1]
 
-  activeElements.forEach((item, index) => {
-    const currEl = rows[item.row - 1].children[item.el - 1]
+    initalCell++
 
     currEl.target = '_blank'
     currEl.style.cursor = 'pointer'
@@ -173,25 +151,13 @@ function fillSocials(content) {
   })
 }
 
-function fillContent(content) {
+function fillContent(row, initalCell, content) {
   const rows = document.querySelectorAll('.row')
 
-  const activeElements = [
-    { row: 2 + 2, el: 4 + 2 },
-    { row: 2 + 2, el: 5 + 2 },
-    { row: 2 + 2, el: 6 + 2 },
-    { row: 2 + 2, el: 7 + 2 },
-    { row: 2 + 2, el: 8 + 2 },
-    { row: 2 + 2, el: 9 + 2 },
-    { row: 2 + 2, el: 10 + 2 },
-    { row: 3 + 2, el: 5 + 2 },
-    { row: 3 + 2, el: 6 + 2 },
-    { row: 3 + 2, el: 7 + 2 },
-    { row: 3 + 2, el: 8 + 2 }
-  ]
+  content.forEach((item, index) => {
+    const currEl = rows[row].children[initalCell - 1]
 
-  activeElements.forEach((item, index) => {
-    const currEl = rows[item.row - 1].children[item.el - 1]
+    initalCell++
 
     currEl.target = '_blank'
     currEl.classList.add('active')

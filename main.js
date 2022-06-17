@@ -87,12 +87,23 @@ window.onload = () => {
     }
   ]
 
+  window.addEventListener('resize', () => {
+    fillText(3, initialCell, 'projects')
+    fillContent(3, initialCell, content1)
+    fillContent(4, initialCell + 1, content2)
+
+    fillText(6, initialCell + 1, 'socials')
+    fillSocials(7, initialCell + 2, socials)
+  })
+
   createGrid()
   const rows = document.querySelectorAll('.row')
 
   let initialCell = Math.round(
     (rows[0].children.length - 'projects'.length) / 2
   )
+
+  initialCell < 2 ? (initialCell = 2) : null
 
   fillText(3, initialCell, 'projects')
   fillContent(3, initialCell, content1)
@@ -144,7 +155,9 @@ function fillSocials(row, initalCell, content) {
     currEl.target = '_blank'
     currEl.style.cursor = 'pointer'
     currEl.innerHTML = `
-      <a href="${content[index].url}" target="_blank" style="width: 100%;height: 100%;display: grid;place-content: center;"">
+      <a href="${content[index].url}"
+      target="_blank"
+      style="width: 100%; height: 100%; display: grid; place-content: center;">
         <img width="50" heigth="50" src="${content[index].image}" alt="icon">
       </a>
     `

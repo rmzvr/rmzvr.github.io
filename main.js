@@ -3,37 +3,37 @@ window.onload = () => {
     {
       name: 'stats preview',
       url: 'https://rmzvr.github.io/stats-preview-card/',
-      image: '/images/1.png'
+      image: '/images/1.webp'
     },
     {
       name: 'sunnyside agency',
       url: 'https://rmzvr.github.io/sunnyside-agency-landing-page/',
-      image: '/images/2.png'
+      image: '/images/2.webp'
     },
     {
       name: 'calculator app',
       url: 'https://rmzvr.github.io/calculator-app/',
-      image: '/images/4.png'
+      image: '/images/4.webp'
     },
     {
       name: 'faq accordion',
       url: 'https://rmzvr.github.io/faq-accordion-card/',
-      image: '/images/3.png'
+      image: '/images/3.webp'
     },
     {
       name: 'url shortening',
       url: 'https://rmzvr.github.io/url-shortening-api/',
-      image: '/images/5.png'
+      image: '/images/5.webp'
     },
     {
       name: 'todo app',
       url: 'https://rmzvr.github.io/todo-app/',
-      image: '/images/7.png'
+      image: '/images/7.webp'
     },
     {
       name: 'interactive comments',
       url: 'https://rmzvr.github.io/interactive-comments-section/',
-      image: '/images/6.png'
+      image: '/images/6.webp'
     }
   ]
 
@@ -41,22 +41,22 @@ window.onload = () => {
     {
       name: 'Planet facts',
       url: 'https://rmzvr.github.io/planets-fact/',
-      image: '/images/10.png'
+      image: '/images/10.webp'
     },
     {
       name: 'officelite landing',
       url: 'https://rmzvr.github.io/officelite-coming-soon-site/',
-      image: '/images/8.png'
+      image: '/images/8.webp'
     },
     {
       name: 'Rock, paper, scissors game',
       url: 'https://rmzvr.github.io/rock-paper-scissors-game/',
-      image: '/images/11.png'
+      image: '/images/11.webp'
     },
     {
       name: 'Random landing',
       url: 'https://rmzvr.github.io/frontend-science/',
-      image: '/images/9.png'
+      image: '/images/9.webp'
     }
   ]
 

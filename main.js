@@ -109,8 +109,8 @@ window.onload = () => {
   fillContent(3, initialCell, content1)
   fillContent(4, initialCell + 1, content2)
 
-  fillText(6, initialCell + 1, 'socials')
-  fillSocials(7, initialCell + 2, socials)
+  fillText(6, initialCell, 'socials')
+  fillSocials(7, initialCell + 1, socials)
 }
 
 function createGrid() {

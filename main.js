@@ -1,4 +1,4 @@
-import { content_row1, content_row2, socials } from './data'
+import { content_row1, content_row2, socials } from './data.js'
 
 window.onload = () => {
   window.addEventListener('resize', () => {

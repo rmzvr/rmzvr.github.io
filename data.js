@@ -67,6 +67,11 @@ export const content_row2 = [
     url: 'https://rmzvr.github.io/shipping_tracking_app/',
     image: '/images/13.webp',
   },
+  {
+    name: 'Movie Finder',
+    url: 'https://movie-finder-phi.vercel.app/',
+    image: '/images/next.webp',
+  },
 ]
 
 export const socials = [
@@ -91,7 +96,7 @@ export const socials = [
     image: '/images/protonmail.svg',
   },
   {
-    url: 'https://media.licdn.com/dms/document/C4E2DAQFItj0EXBARYQ/profile-treasury-document-pdf-analyzed/0/1679131498689?e=1680134400&v=beta&t=1hUQcYLPpAZq8LY_-QGfLZO2L9qXkXCIXprdgcvTt-A',
+    url: 'https://media.licdn.com/dms/document/C562DAQFsmGNVvF6w8A/profile-treasury-document-pdf-analyzed/0/1679978969313?e=1680739200&v=beta&t=VSnd1sMqJw3FgzNctO08X-Oc1QM63koEixDN17mbV78',
     image: '/images/resume2.png',
   },
 ]

@@ -1,15 +1,6 @@
 import { content_row1, content_row2, socials } from './data.js'
 
 window.onload = () => {
-  window.addEventListener('resize', () => {
-    fillText(3, initialCell, 'projects')
-    fillContent(3, initialCell, content_row1)
-    fillContent(4, initialCell + 1, content_row2)
-
-    fillText(6, initialCell + 1, 'socials')
-    fillSocials(7, initialCell + 2, socials)
-  })
-
   createGrid()
   const rows = document.querySelectorAll('.row')
 
@@ -23,8 +14,8 @@ window.onload = () => {
   fillContent(3, initialCell, content_row1)
   fillContent(4, initialCell + 1, content_row2)
 
-  fillText(6, initialCell, 'socials')
-  fillSocials(7, initialCell + 1, socials)
+  fillText(6, initialCell + 1, 'socials')
+  fillSocials(7, initialCell + 2, socials)
 }
 
 function createGrid() {

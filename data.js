@@ -64,7 +64,7 @@ export const content_row2 = [
   },
   {
     name: 'Trello (clone) app',
-    url: 'https://rmzvr.github.io/shipping_tracking_app/',
+    url: 'https://rmzvr.github.io/task-control-app/',
     image: '/images/13.webp',
   },
   {

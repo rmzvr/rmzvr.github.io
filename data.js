@@ -96,7 +96,7 @@ export const socials = [
     image: '/images/protonmail.svg',
   },
   {
-    url: 'https://media.licdn.com/dms/document/C562DAQFsmGNVvF6w8A/profile-treasury-document-pdf-analyzed/0/1679978969313?e=1680739200&v=beta&t=VSnd1sMqJw3FgzNctO08X-Oc1QM63koEixDN17mbV78',
+    url: 'https://media.licdn.com/dms/document/C562DAQFsmGNVvF6w8A/profile-treasury-document-pdf-analyzed/0/1679978969313?e=1683763200&v=beta&t=qqwQqkK8tGDAsPQggQukurFGofMGdXnrKvHJr3j0ZXg',
     image: '/images/resume2.png',
   },
 ]
